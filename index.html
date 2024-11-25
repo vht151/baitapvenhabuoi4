@@ -4,94 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <style>
     .all{
-        background: url(imgs/bg_header.jpg);
         height: 80vh;
+        width: 100%;
+        background: url(imgs/bg-1.jpg);
         background-position: center;
         background-size: cover;
-        text-align: center;
-        padding: 50px;
         color: #fff;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .all .header{
+        display: flex;
+        justify-content: space-around
+    }
+    .all .logo img{
+        width: 300px;
+    }
+    .all .header .contact-info{
+        display: flex;
+        text-align: left;
+        align-items: center;   
+    }
+    .all .header .contact-info p{
+        margin-right: 30px;
+        color: rgb(97, 96, 96);
+        font-size: 10px;
+    }
+    .all .header .contact-info p span{
+        font-size: 15px;
     }
     .all .navbar{
-        width: 70%;
-        background: rgb(235, 61, 18);
+        width: 75%;
         margin: 0 auto;
-        padding: 0px 40px;  
-        display: flex; /* sắp xếp, căn chỉnh và phân phối không gian giữa các phần tử con một cách dễ dàng và linh hoạt */
-        justify-content: space-between; 
-        align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+        padding: 20px;
+        background: rgb(0, 16, 59);
+        display: flex;
     }
-    .all .navbar .logo{
-        /* width: 40%; */
+    .all .navbar .menu ul{
+        list-style: none;
         display: flex;
         justify-content: left;
     }
-    .all .navbar .logo img{
-        width: 300px;
-        
-    }
-    .all .navbar .menu{
-        /* width: 60%; */
-        display: flex;
-        justify-content: right; 
-    }
-    .all .navbar .menu ul{
-        display: flex;
-        list-style: none;
-        /* justify-content: space-evenly; */
-    }
-    .all .navbar .menu ul a{
-        text-decoration: none;
+    .all .navbar .menu a{
         color: #fff;
-        margin-left: 40px;
+        text-decoration: none;
+        margin-left: 30px;
         font-size: 20px;
     }
-    .all .body h1{
-        font-size: 150px;
-        margin-top: 150px;
+    .all .navbar .mxh{
+        justify-content: right;
     }
-    .all .body h1 span{
-        color: rgb(235, 61, 18);
+    i{
+        margin-right: 15px;
     }
-    .all .body p{
-        font-size: 30px;
-        opacity: 0.6;
-    }
-    .all .body button{
-        background: rgb(235, 61, 18);
-        padding: 13px 25px;
-        color: #d3d3d3;
-        margin-top: 15px;
+    .all .navbar .quote{
+        padding: 10px;
+        background: rgb(255, 174, 0);
+        color: #fff;
         border: none;
-        font-weight: 500;
-        font-size: 20px;
+        border-radius: 5%;
+    }
+    .all h1{
+        margin-top: 120px;
+        color: rgb(0, 16, 59);
+        font-size: 60px;
+    }
+    .all .portfolio{
+        padding: 15px 25px;
+        background: rgb(255, 174, 0);
+        color: #fff;
+        border: none;
+        border-radius: 5%;
+        text-transform: uppercase;
+        
     }
 </style>
 <body>
     <div class="all">
-        <div class="navbar">
+        <div class="header">
             <div class="logo">
                 <img src="imgs/logo.png" alt="">
             </div>
+            <div class="contact-info">
+                <i class="fa-regular fa-clock"></i><p>WORKING HOURS <br><span>Mon - Sat 8.00 - 18.00</span></p>
+                <i class="fa-solid fa-phone"></i><p>CALL US <br><span>(+1) 555 234-8765</span></p>
+            </div>
+        </div>
+        <div class="navbar">
             <div class="menu">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Projects</a></li>
-                    <li><a href="#">BolgNews</a></li>
+                    <li><a href="#">Blog/News</a></li>
                     <li><a href="#">Shop</a></li>
                 </ul>
+                <div class="mxh">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-vine"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <button class="quote">GET A GOUTE</button>
+                </div>
             </div>
         </div>
-        <div class="body">
-            <h1>Think Big. <span>We do.</span></h1>
-            <p>Capitalise on low hanging fruit to identify a ballpark.</p>
-            <button>OUR PORTFOLIO ></button>
+        <div class="main-content">
+            <H1>Reliable Engineering <br> Takes Many Forms</H1>
         </div>
+        <button class="portfolio">Our portfolio <i class="fa-solid fa-arrow-right"></i></button>
     </div>
 </body>
 </html>
